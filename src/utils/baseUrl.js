@@ -1,0 +1,7 @@
+
+
+let BASE_URL ='https://shoponem.pythonanywhere.com/api/v1/';
+
+// let BASE_URL = 'http://127.0.0.1:8000/api/v1/';
+
+export default BASE_URL;
