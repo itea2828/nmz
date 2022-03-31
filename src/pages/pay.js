@@ -4,13 +4,13 @@ import { useDispatch } from 'react-redux';
 export default function Pay() {
 
 
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
     useEffect(() => {
         const script = document.createElement('script');
       
         script.src = "https://widget.cloudpayments.ru/bundles/cloudpayments.js";
-        script.async = true;
+        // script.async = true;
       
         document.head.appendChild(script);
       
@@ -21,7 +21,7 @@ export default function Pay() {
 
 
     const pay = function () {
-        var widget = new cp.CloudPayments();
+        var widget = new cp?.CloudPayments();
         widget.pay('auth', // или 'charge'
             { //options
                 publicId: 'pk_3b7a700947364f89e392b8977fdd9', //id из личного кабинета
@@ -53,7 +53,7 @@ export default function Pay() {
     
     return (
         <div>
-                    <button  onClick={() => pay()}>Подтверлить & Оплатить</button>
-                </div>
+            <button  onClick={() => pay()}>Подтверлить & Оплатить</button>
+        </div>
     )
 }
